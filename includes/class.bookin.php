@@ -21,7 +21,7 @@
 
 	    public function bookin_template()
 	    {
-	    	echo 'My bookin';
+	    	include (BASEPAHT ."/templates/bookin-template.php");
 	    }
 	}
 
