@@ -1,7 +1,7 @@
 <div class="wrap">
 <h2><?php _e('Bookin cherche','plugin-chercfe'); ?></h2>
 <br>
-<button class="button">AJouter</button>
+<button class="btn btn-primary">Ajouter</button>
 <br>
   <table class="wp-list-table widefat fixed striped pages">
       <thead>
@@ -27,9 +27,14 @@
             <td><?php echo  $data->port ?></td>
             <td><?php echo  $data->compagnie ?></td>
             <td><?php echo  $data->image ?></td>
-            <td><button class="button">Modifier</button><button class="button">Supprimer</button></td>
+            <td><button class="btn btn-success" id="edit">Modifier</button><button class="btn btn-danger">Supprimer</button></td>
           </tr>
         <?php endforeach?>
       </tbody>
     </table>
 </div>
+<script>
+  $("#edit").click(function(){
+    alert("test");
+  })
+</script>
