@@ -17,6 +17,7 @@
 	    exit; // Exit if accessed directly.
 	}
 
+	include_once('includes/class.bookin.php');
 	define('BOOKIN', 'bookin_cherche');
 	 
 	function install(){
@@ -44,5 +45,6 @@
 	}
 	register_uninstall_hook(__FILE__, 'uninstall');
 	 
+	new Bookin();
 
 ?>
