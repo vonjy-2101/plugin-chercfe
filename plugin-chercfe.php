@@ -17,6 +17,7 @@
 	    exit; // Exit if accessed directly.
 	}
 
+	include_once('includes/class.bookin.php');
 	define('BOOKIN', 'bookin_cherche');
 	 
 	function install(){
@@ -25,6 +26,7 @@
 	  $bookin_collate = $wpdb->get_charset_collate();
 	  $bookin_structure = "CREATE TABLE IF NOT EXISTS $bookin_cherche (
 	                            `id` int(11) NOT NULL AUTO_INCREMENT,
+	                            `destinnation` varchar(255) CHARACTER SET utf8 NOT NULL,
 	                            `date` varchar(255) CHARACTER SET utf8 NOT NULL,
 	                            `port` varchar(255) CHARACTER SET utf8 NOT NULL,
 	                            `compagnie` varchar(255) CHARACTER SET utf8 NOT NULL,
@@ -44,5 +46,6 @@
 	}
 	register_uninstall_hook(__FILE__, 'uninstall');
 	 
+	new Bookin();
 
 ?>
